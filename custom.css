@@ -1,0 +1,22 @@
+html body {
+  background: #1c1e20;
+  background: -moz-radial-gradient(center, circle cover, #466BB0 0%, #1c1e20 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #466BB0), color-stop(100%, #1c1e20));
+  background: -webkit-radial-gradient(center, circle cover, #466BB0 0%, #1c1e20 100%);
+  background: -o-radial-gradient(center, circle cover, #466BB0 0%, #1c1e20 100%);
+  background: -ms-radial-gradient(center, circle cover, #466BB0 0%, #1c1e20 100%);
+  background: radial-gradient(center, circle cover, #466BB0 0%, #1c1e20 100%);
+  background-color: #466BB0; 
+}
+
+.reveal section pre {
+    background-color: #3F3F3F !important;
+    padding: 5px !important;
+    font-size: 0.65em;
+    overflow: hidden;
+}
+
+.reveal section pre code {
+  overflow-x: hidden;
+  max-height: none;
+}
