@@ -12,6 +12,7 @@ RUN sed -i Gruntfile.js -e 's/port: port,/port: port, hostname: "",/'
 ADD index.html /revealjs/
 ADD custom.css /revealjs/css/
 ADD title.js /revealjs/plugin/
+ADD test_slides.md /revealjs/md/slides.md
 ONBUILD ADD slides.md /revealjs/md/
 
 EXPOSE 8000
