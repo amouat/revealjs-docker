@@ -13,7 +13,6 @@ ADD index.html /revealjs/
 ADD custom.css /revealjs/css/
 ADD title.js /revealjs/plugin/
 ADD test_slides.md /revealjs/md/slides.md
-ONBUILD ADD slides.md /revealjs/md/
 
 EXPOSE 8000
 CMD ["grunt", "serve"]
