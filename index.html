@@ -76,10 +76,11 @@
 				]
 			});
 
-                    $(document).ready(function() {
+                    document.addEventListener("DOMContentLoaded", function() {
                         Reveal.configure({
                           keyboard: {
-                              41: 'next' // page down move to next slide - for my clicker
+                              40: 'next', // down moves to next slide - for my clicker
+                              38: 'prev', // up moves to previous slide - for my clicker
                             }
                           });
                         });
