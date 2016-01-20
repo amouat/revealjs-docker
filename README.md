@@ -19,7 +19,7 @@ If you want to use straight HTML for the slides, mount the html at `/revealjs/in
 
 If you need to include other files e.g. images, keep them with the presentation file and just mount the directory e.g:
 
-    docker run -d -p 8000:8000 -v /my/slide/dir:/revealjs/md amouat/revealjs:latest
+    docker run -d -p 8000:8000 -v /my/slide/dir:/revealjs/pres amouat/revealjs:latest
 
 This project is *heavily* based on [Peter Parente's revealjs](https://github.com/parente/dockerfiles/tree/master/revealjs). This differences are that this version has an updated Dockerfile which uses the NodeJS official image and removes a problematic VOLUME command. 
 
