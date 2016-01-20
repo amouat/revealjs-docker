@@ -8,10 +8,10 @@ A dockerized version of the [Reveal JS](http://lab.hakim.se/reveal-js/#/) presen
 And open a browser to `http://localhost:8000` (use the IP of your VM if
 using boot2docker, which can be found by running `boot2docker ip`).
 
-To use your own slides, replace `/revealjs/md/slides.md` with your own slides
+To use your own slides, replace `/revealjs/pres/slides.md` with your own slides
 in Markdown format. The easiest way to do this is with the `-v` flag e.g:
 
-    docker run -d -p 8000:8000 -v /path/to/my/slides.md:/revealjs/md/slides.md amouat/revealjs:latest
+    docker run -d -p 8000:8000 -v /path/to/my/slides.md:/revealjs/pres/slides.md amouat/revealjs:latest
 
 You can use the the [test slides](https://raw.githubusercontent.com/amouat/revealjs-docker/master/test_slides.md) to get an idea for the formatting.
 
