@@ -1,4 +1,4 @@
-FROM node:0.12-slim
+FROM node:4.4-slim
 
 MAINTAINER Adrian Mouat <adrian@adrianmouat.com>
 
