@@ -28,3 +28,5 @@ This project is *heavily* based on [Peter Parente's revealjs](https://github.com
 Currently, the Dockerfile just grabs the newest version of everything, which
 means it could potentially break at any point. I intend to add another branch
 which has pegged versions of everything.
+
+[![](https://images.microbadger.com/badges/image/amouat/revealjs.svg)](https://microbadger.com/images/amouat/revealjs "Get your own image badge on microbadger.com")
