@@ -3,30 +3,24 @@ RevealJS-Docker
 
 A dockerized version of the [Reveal JS](http://lab.hakim.se/reveal-js/#/) presentation software. To try it out, just do:
 
-    docker run -d -p 8000:8000 amouat/revealjs:latest
+```
+  docker-compose up -d
+```
 
-And open a browser to `http://localhost:8000` (use the IP of your VM if
-using boot2docker, which can be found by running `boot2docker ip`).
+And open a browser to `http://localhost:8000` (use the IP of your VM ifusing boot2docker, which can be found by running
+`boot2docker ip`).
 
-To use your own slides, replace `/revealjs/pres/slides.md` with your own slides
-in Markdown format. The easiest way to do this is with the `-v` flag e.g:
+To use your own slides, replace `/slides/slides.md` with your own slides in Markdown format.
 
-    docker run -d -p 8000:8000 -v /path/to/my/slides.md:/revealjs/pres/slides.md amouat/revealjs:latest
+If you need to include other files e.g. images, keep them with the presentation file and add them in the `slides`
+directory.
 
-You can use the the [test slides](https://raw.githubusercontent.com/amouat/revealjs-docker/master/test_slides.md) to get an idea for the formatting.
+If you need to change some options or change the theme, update the files in the `docker/revealjs-files` directory and rebuild the image:
 
-If you want to use straight HTML for the slides, mount the html at `/revealjs/index.html`.
+```
+  docker-compose build
+```
 
-If you need to include other files e.g. images, keep them with the presentation file and just mount the directory e.g:
-
-    docker run -d -p 8000:8000 -v /my/slide/dir:/revealjs/pres amouat/revealjs:latest
-
-This project is *heavily* based on [Peter Parente's revealjs](https://github.com/parente/dockerfiles/tree/master/revealjs). This differences are that this version has an updated Dockerfile which uses the NodeJS official image and removes a problematic VOLUME command. 
-
-## Stable Version
-
-Currently, the Dockerfile just grabs the newest version of everything, which
-means it could potentially break at any point. I intend to add another branch
-which has pegged versions of everything.
+This project is *heavily* based on [Peter Parente's revealjs](https://github.com/parente/dockerfiles/tree/master/revealjs). This differences are that this version has an updated Dockerfile which uses the NodeJS official image and removes a problematic VOLUME command.
 
 [![](https://images.microbadger.com/badges/image/amouat/revealjs.svg)](https://microbadger.com/images/amouat/revealjs "Get your own image badge on microbadger.com")
