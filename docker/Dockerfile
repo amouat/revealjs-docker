@@ -2,7 +2,7 @@ FROM node:4.4-slim
 
 # Install packages.
 RUN apt-get update \
-    && apt-get install -y git \
+    && apt-get install -y --no-install-recommends git \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 RUN groupadd -r slides && useradd -r -g slides slides
