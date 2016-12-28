@@ -7,8 +7,7 @@ A dockerized version of the [Reveal JS](http://lab.hakim.se/reveal-js/#/) presen
   docker-compose up -d
 ```
 
-And open a browser to `http://localhost:8000` (use the IP of your VM ifusing boot2docker, which can be found by running
-`boot2docker ip`).
+And open a browser to `http://localhost:8000`.
 
 To use your own slides, replace `/slides/slides.md` with your own slides in Markdown format.
 
