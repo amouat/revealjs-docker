@@ -1,14 +1,22 @@
-FROM node:4.4-slim
+FROM node:6-slim
 
 # Install packages.
+# Not happy with python and gcc!
 RUN apt-get update \
-    && apt-get install -y --no-install-recommends git \
+    && apt-get install -y --no-install-recommends bzip2 python make g++\
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 RUN groupadd -r slides && useradd -r -g slides slides
 
-# Clone reveal.js.
-RUN git clone -b 3.3.0 https://github.com/hakimel/reveal.js.git /revealjs
+# Grab reveal.js code
+ENV VERSION=3.3.0 \
+    REPO=https://github.com/hakimel/reveal.js \
+    SHA=45dc8caeb1a1a81d74293552ea3a408bc463dc3e
+RUN curl -o /tmp/reveal.js.tar.gz -sSL $REPO/archive/$VERSION.tar.gz && \
+    echo "$SHA /tmp/reveal.js.tar.gz" | sha1sum --check - && \
+    tar -xzf /tmp/reveal.js.tar.gz -C / && \
+    rm -f /tmp/reveal.js.tar.gz && \
+    mv reveal.js-$VERSION /revealjs
 
 # Switch to the reveal.js directory.
 WORKDIR /revealjs
