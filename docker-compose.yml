@@ -1,0 +1,10 @@
+version: '2'
+services:
+  revealjs:
+    build:
+      context: docker
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./slides:/revealjs/pres:ro
