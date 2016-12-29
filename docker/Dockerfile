@@ -3,8 +3,8 @@ FROM node:6-slim
 LABEL org.label-schema.docker.dockerfile="/Dockerfile" \
       org.label-schema.vcs-type="git" \
       org.label-schema.vcs-url="https://github.com/amouat/revealjs-docker" \
-      org.label-schema.build-data="$BUILD_DATE" \
-      org.label-schema.vcs-ref="$VCS_REF"
+      org.label-schema.build-data=${BUILD_DATE} \
+      org.label-schema.vcs-ref=${VCS_REF}
 
 # Install packages.
 # Not happy with python and gcc!
