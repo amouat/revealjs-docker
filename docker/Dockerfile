@@ -1,5 +1,11 @@
 FROM node:6-slim
 
+LABEL org.label-schema.docker.dockerfile="/Dockerfile" \
+      org.label-schema.vcs-type="git" \
+      org.label-schema.vcs-url="https://github.com/amouat/revealjs-docker" \
+      org.label-schema.build-data="$BUILD_DATE" \
+      org.label-schema.vcs-ref="$VCS_REF"
+
 # Install packages.
 # Not happy with python and gcc!
 RUN apt-get update \
@@ -7,6 +13,8 @@ RUN apt-get update \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 RUN groupadd -r slides && useradd -r -g slides slides
+
+COPY Dockerfile /Dockerfile
 
 # Grab reveal.js code
 ENV VERSION=3.3.0 \
