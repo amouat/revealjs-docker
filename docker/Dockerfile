@@ -26,7 +26,7 @@ WORKDIR /revealjs
 
 # Prepare the reveal.js installation.
 RUN npm install -g grunt-cli && npm install
-RUN sed -i Gruntfile.js -e "s/files: \[ 'index\.html'\]/files: [ 'pres\/**' ]/"
+RUN sed -i Gruntfile.js -e "s/files: \[ 'index\.html'\]/files: [ 'slides\/**' ]/"
 
 COPY revealjs-files/ /revealjs/
 

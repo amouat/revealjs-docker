@@ -8,4 +8,4 @@ services:
       - "8000:8000"
       - "35729:35729"
     volumes:
-      - ./slides:/revealjs/pres:ro
+      - ./slides:/revealjs/slides:ro
