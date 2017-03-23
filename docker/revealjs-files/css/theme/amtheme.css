@@ -20,6 +20,8 @@ body {
 
   font-family: "Open Sans", Helvetica, sans-serif;
   font-size: 36px;
+  /** surprised I needed to change the spacing, but it helps a lot **/
+  letter-spacing: -0.04em; 
   font-weight: normal;
   color: #444; }
 
@@ -41,8 +43,6 @@ body {
   font-family: "Open Sans", Helvetica, sans-serif;
   font-weight: normal;
   line-height: 1.2;
-  /** surprised I needed to change the spacing, but it helps a lot **/
-  letter-spacing: -0.04em; 
   text-shadow: none;
   word-wrap: break-word; }
 
