@@ -2,9 +2,8 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
 
 /**
- * Sky theme for reveal.js.
+ * AM modified version of Sky theme. 
  *
- * Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
  */
 .reveal a {
   line-height: 1.3em; }
@@ -18,10 +17,11 @@ body {
   }
 
 .reveal {
-  font-family: 'Lato', sans-serif;
+
+  font-family: "Roboto", Helvetica, sans-serif;
   font-size: 36px;
   font-weight: normal;
-  color: #555; }
+  color: #444; }
 
 ::selection {
   color: #fff;
@@ -37,20 +37,23 @@ body {
  *********************************************/
 .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
   margin: 0 0 20px 0;
-  color: #555;
-  font-family: 'League Gothic', Impact, sans-serif;
+  color: #444;
+  font-family: "Roboto", Helvetica, sans-serif;
   font-weight: normal;
   line-height: 1.2;
   letter-spacing: normal;
-  text-transform: uppercase;
   text-shadow: none;
   word-wrap: break-word; }
 
 .reveal h1 {
-  font-size: 3.77em; }
+  font-size: 3.77em; 
+  font-variant:small-caps;
+}
 
 .reveal h2 {
-  font-size: 2.11em; }
+  font-size: 2.11em; 
+  font-variant:small-caps;
+}
 
 .reveal h3 {
   font-size: 1.55em; }
