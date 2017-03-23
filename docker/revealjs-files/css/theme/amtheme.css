@@ -18,7 +18,7 @@ body {
 
 .reveal {
 
-  font-family: "Roboto", Helvetica, sans-serif;
+  font-family: "Open Sans", Helvetica, sans-serif;
   font-size: 36px;
   font-weight: normal;
   color: #444; }
@@ -38,21 +38,20 @@ body {
 .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
   margin: 0 0 20px 0;
   color: #444;
-  font-family: "Roboto", Helvetica, sans-serif;
+  font-family: "Open Sans", Helvetica, sans-serif;
   font-weight: normal;
   line-height: 1.2;
-  letter-spacing: normal;
+  /** surprised I needed to change the spacing, but it helps a lot **/
+  letter-spacing: -0.04em; 
   text-shadow: none;
   word-wrap: break-word; }
 
 .reveal h1 {
   font-size: 3.77em; 
-  font-variant:small-caps;
 }
 
 .reveal h2 {
   font-size: 2.11em; 
-  font-variant:small-caps;
 }
 
 .reveal h3 {
