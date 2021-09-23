@@ -1,7 +1,7 @@
 RevealJS-Docker
 ===============
 
-*NOTE* This repo is no longer maintained and will be archived. Feel free to fork or play around, but there are presumably better solutions now.
+_NOTE This repo is no longer maintained and will be archived. Feel free to fork or play around, but there are presumably better solutions now._
 
 A dockerized version of the [Reveal JS](http://lab.hakim.se/reveal-js/#/) presentation software. To try it out, just do:
 
